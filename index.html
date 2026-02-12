@@ -1,59 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Ice's Place - Ban Appeal</title>
     <style>
-        body {
-            font-family: 'DynaPuff', cursive;
-            text-align: center;
-            margin-top: 50px;
-            background-color: black;
-        }
-        h1 {
-            color: #e72b2bff;
-        }
-        p {
-            color: #575757;
-            max-width: 600px;
-            margin: 20px auto;
-            line-height: 1.6;
-        }
-        a {
-            font-family: 'DynaPuff', cursive;
-            padding: 15px 100px;
-            font-size: 16px;
-            color: white;
-            background-color: #f30505;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-        }
-        a:hover {
-            background-color: #b30000;
-        }
-    </style>
-</head>
-<body>
+      body {
+        background: radial-gradient(circle at 50% 0%, #3b1a1a, #050505);
+        font-family: "Nunito", sans-serif;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        overflow-x: hidden;
+      }
 
-    <h1>Ice's Place - Ban Appeal</h1>
-    <p>
-        Appeal your Ban for Ice's Place Discord Server. This form can be used to revert a ban that you believe was False, or if you simply want a reason why your Ban happened in the first place.
-    </p>
-    <br>
-    <a href="https://forms.gle/93mJVrKgHMWYczYf7">
-        Appeal your Ban
-    </a>
-    <br>
-    <br>
-    <br>
-    <hr>
-    <br>
-</body>
+      .bg-glow {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: rgb(196, 106, 106);
+        filter: blur(150px);
+        opacity: 0.15;
+        border-radius: 50%;
+        z-index: -1;
+      }
+      .bg-glow.one { top: 10%; left: 20%; background: #fe4f4f; }
+      .bg-glow.two { bottom: 10%; right: 20%; background: #fe0000; }
+
+      .container {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 50px 30px; 
+        border-radius: 24px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        max-width: 600px;
+        width: 90%;
+        box-sizing: border-box;
+        animation: fadeIn 1s ease-out;
+      }
+
+      h1 {
+        font-family: "DynaPuff", cursive;
+        background: linear-gradient(to right, #f08080, #882a2a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 30px;
+        font-size: clamp(1.4rem, 7.5vw, 2.8rem); 
+        white-space: nowrap; 
+        margin-top: 0;
+        line-height: 1.2;
+        text-shadow: 0 10px 30px rgba(240, 128, 128, 0.1);
+      }
+
+      p {
+        color: #b0b8c4;
+        margin: 0 auto 6px auto; 
+        line-height: 1.6;
+        font-size: 1.1rem;
+        max-width: 90%;
+      }
+
+      p:last-of-type {
+        margin-bottom: 40px; 
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+      }
+
+      @media (min-width: 600px) {
+        .buttons {
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-family: "Nunito", sans-serif;
+        font-weight: 700;
+        padding: 16px 28px;
+        min-width: 180px;
+        font-size: 1rem;
+        color: #050505;
+        background: #ec7e7e;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: 0 4px 15px rgba(240, 128, 128, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      a.secondary {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: none;
+      }
+
+      a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(240, 128, 128, 0.4);
+      }
+
+      a.secondary:hover {
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="bg-glow one"></div>
+    <div class="bg-glow two"></div>
+
+    <div class="container">
+      <h1>Ice's Place Ban Appeal</h1>
+      <p>Appeal your Ban for Ice's Place Discord/Stoat Server. This form can be used to revert a ban that you believe was False, or if you simply want a reason why your Ban happened in the first place.</p>
+
+      <div class="buttons">
+        <a href="https://forms.gle/VNgfhSwqTda7fK1m6">
+           <i class="fa-brands fa-discord"></i>
+           Discord Ban Appeal
+        </a>
+        <a href="https://forms.gle/QS5Yzzcagc555K7H8">
+           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4"></path></svg>
+           Stoat Ban Appeal
+        </a>
+      </div>
+    </div>
+  </body>
 </html>
